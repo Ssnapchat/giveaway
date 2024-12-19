@@ -1,0 +1,19 @@
+ <script>
+        const url = "https://67648aec52b2a7619f5ce1fe.mockapi.io/login"; // MockAPI URL
+
+async function sendData(data) {
+  const response = await fetch(url, {
+    method: "POST", // HTTP method
+    headers: {
+      "Content-Type": "application/json", // Tell the server you're sending JSON
+    },
+    body: JSON.stringify(data), // Data you want to send
+  });
+
+  const result = await response.json();
+  console.log("Data sent:", result);
+}
+
+// Send some data
+sendData({ message: "Hello, Nigga!" });
+    </script>
